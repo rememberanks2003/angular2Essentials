@@ -1,9 +1,16 @@
-<header 
+import {Component} from 'angular2/Core';
+
+<header>
     [ngClass]="{'medium-movies':medium === 'Movies', 'medium-series':medium === 'Series'}">
     <h2>{{medium}}</h2>
     <div>{{ mediaItems | categoryList }}</div>
 </header>
 <section>
+  function greeter(person){
+    return "Hello, " + person; 
+  }
+  var user = "Jane User";
+  
   <mw-media-item
     [ngClass]="{'medium-movies': mediaItem.medium==='Movies', 'medium-series':mediaItem.medium==='Series'}" 
     *ngFor="let mediaItem of mediaItems"
@@ -14,4 +21,5 @@
   <a routerLink="/add">
     <img src="media/01.png" class="icon" />
   </a>
+  <div></div>
 </footer>
